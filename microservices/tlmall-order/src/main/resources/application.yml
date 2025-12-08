@@ -1,0 +1,20 @@
+server:
+  port: 8030
+spring:
+  application:
+    name: tlmall-order
+  cloud:
+    nacos:
+      config:
+        server-addr: tlmall-nacos-server:8848
+        file-extension: yml
+  config:
+    import:
+      - optional:nacos:${spring.application.name}.yml
+      - optional:nacos:db-common.yml
+      - nacos:nacos-discovery.yml
+      - optional:nacos:seata-client.yml
+      - optional:nacos:sentinel-dashboard.yml
+logging:
+  level:
+    com.alibaba.cloud.nacos: debug

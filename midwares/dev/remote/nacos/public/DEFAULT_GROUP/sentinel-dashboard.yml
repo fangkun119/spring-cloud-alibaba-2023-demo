@@ -1,0 +1,6 @@
+spring:
+  cloud:
+    sentinel:
+      transport:
+        # 添加sentinel的控制台地址
+        dashboard: tlmall-sentinel-dashboard:8888

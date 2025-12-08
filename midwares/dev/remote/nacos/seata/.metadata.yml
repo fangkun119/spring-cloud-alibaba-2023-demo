@@ -1,0 +1,6 @@
+metadata:
+- appName: ''
+  dataId: seataServer.properties
+  desc: seata configuration
+  group: SEATA_GROUP
+  type: properties

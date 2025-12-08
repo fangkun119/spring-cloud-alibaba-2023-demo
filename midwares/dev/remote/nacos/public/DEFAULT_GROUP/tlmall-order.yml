@@ -1,0 +1,8 @@
+spring: 
+  cloud:
+    loadbalancer:
+      nacos:
+        enabled: true 
+  datasource:
+    url: jdbc:mysql://tlmall-mysql:3306/tlmall_order?useSSL=false&characterEncoding=utf8&allowPublicKeyRetrieval=true
+
