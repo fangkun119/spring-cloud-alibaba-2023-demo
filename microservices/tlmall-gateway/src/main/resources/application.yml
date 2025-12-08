@@ -1,0 +1,16 @@
+server:
+  port: 18888
+spring:
+  application:
+    name: tlmall-gateway
+  cloud:
+    nacos:
+      config:
+        server-addr: tlmall-nacos-server:8848
+        file-extension: yml
+  config:
+    import:
+      - optional:nacos:${spring.application.name}.yml
+      - nacos:nacos-discovery.yml
+
+

@@ -1,0 +1,16 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: tlmall-storage
+  cloud:
+    nacos:
+      config:
+        server-addr: tlmall-nacos-server:8848
+        file-extension: yml
+  config:
+    import:
+      - optional:nacos:${spring.application.name}.yml
+      - optional:nacos:db-common.yml
+      - nacos:nacos-discovery.yml
+      - optional:nacos:seata-client.yml
